@@ -4,8 +4,26 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <Button
-        android:id="@+id/MyButton"
-        android:layout_width="fill_parent"
+        android:text="Prev"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Hello" />
+        android:layout_toLeftOf="@id/MyButton"
+        android:id="@+id/buttonPrev"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonNext"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+    <TextView
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonPrev"
+        android:id="@+id/textTitle"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

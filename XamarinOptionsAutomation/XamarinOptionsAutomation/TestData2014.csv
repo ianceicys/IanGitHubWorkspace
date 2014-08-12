@@ -1,0 +1,2 @@
+Apple_SDK,EmulatorLaunchArguments,ClearEntryValue,AndroidSDKLocation,AndroidNDKLocation
+Test1234,emulator.exe -avd NameOfYourEmulator -partition-size 512,{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{DEL}{DEL}{DEL}{DEL}{DEL}{DEL}{DEL}{DEL},ANDROID_SDK_HOME,ANDROID_NDK_HOME
