@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace XamarinOptionsAutomation
@@ -18,6 +19,12 @@ namespace XamarinOptionsAutomation
         public TestContext TestContext { get; set; }
 
 
+        /// <summary>
+        /// Gets the UI map.
+        /// </summary>
+        /// <value>
+        /// The UI map.
+        /// </value>
         public UIMap UIMap
         {
             get
@@ -31,36 +38,132 @@ namespace XamarinOptionsAutomation
             }
         }
 
+        public void LaunchVisualStudio2010()
+        {
+            string pathToVisaulStudio2010Aut = Environment.GetEnvironmentVariable(
+                "VisualStudio2010", EnvironmentVariableTarget.User);
+
+            ApplicationUnderTest.Launch(pathToVisaulStudio2010Aut);
+        }
+
+        public void LaunchVisualStudio2013()
+        {
+            string pathToVisualStudio2013Aut = Environment.GetEnvironmentVariable(
+                "VisualStudio2013", EnvironmentVariableTarget.User);
+
+            ApplicationUnderTest.Launch(pathToVisualStudio2013Aut);
+        }
+
+        /// <summary>
+        /// Options_s the apple SDK text box_ text entryis editable_ v S2013.
+        /// </summary>
         [TestCategory("Xamarin_3_3_47_0"),
          TestCategory("VisualStudio_2013"),
          TestCategory("OptionsMenu"),
          TestCategory("iOS"),
          DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\TestData2014.csv",
              "TestData2014#csv", DataAccessMethod.Sequential), DeploymentItem("TestData2014.csv"), TestMethod]
-        public void Options_AppleSDKTextBox_TextEntryisEditable()
+        public void Options_AppleSDKTextBox_TextEntryisEditable_VS2013()
         {
-            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-
+            LaunchVisualStudio2013();
+            UIMap.ARRANGE_Click_ToolsMenu();
+            UIMap.ARRANGE_Click_Tools_OptionsMenu();
+            UIMap.ASSERT_OptionsMenu_IsLoadedAndVisible();
+            UIMap.ASSERT_SearchOptions_IsLoadedAndVisible();
+            UIMap.ACT_Enter_Xamarin_inTxtBox_SearchOptions();
+            UIMap.ASSERT_Xamarin_Android_InstalledAndVisible();
+            UIMap.ASSERT_Xamarin_iOS_InstalledAndVisible();
+            UIMap.ACT_Click_TopLevelOption();
+            UIMap.ACT_Click_Check_Latest_Xamarin_Installed_NoNewUpdatesRequired();
             UIMap.ACT_Click_Xamarin_Android_Settings_TreeViewLevel_2();
             UIMap.ACT_Click_Xamarin_iOS_Settings_TreeViewLevel_2();
             UIMap.ASSERT_iOS_SettingsScreen_IsLoadedAndVisible();
             UIMap.ASSERT_AppleSDK_TxtBox_ValueisEmpty();
             UIMap.ACT_Enter_SDKValue_inAppleSDK_TextBox(TestContext.DataRow["Apple_SDK"].ToString());
             UIMap.ASSERT_SDKValueEntered_Matches_ExpectedValue();
-            UIMap.ARRANGE_Clear_AppleSDK_BlankValue();
+            UIMap.ACT_Enter_SDKValue_inAppleSDK_TextBox(TestContext.DataRow["ClearEntryValue"].ToString());
             UIMap.Arrange_Click_OKButton_ToCloseOptionsScreen();
         }
 
+        /// <summary>
+        /// Options_s the apple SDK text box_ text entryis editable_ v S2013.
+        /// </summary>
+        [TestCategory("Xamarin_3_3_47_0"),
+         TestCategory("VisualStudio_2010"),
+         TestCategory("OptionsMenu"),
+         TestCategory("iOS"),
+         DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\TestData2014.csv",
+             "TestData2014#csv", DataAccessMethod.Sequential), DeploymentItem("TestData2014.csv"), TestMethod]
+        public void Options_AppleSDKTextBox_TextEntryisEditable_VS2010()
+        {
+            LaunchVisualStudio2010();
+            UIMap.ARRANGE_Click_ToolsOptions_VS2010();
+            UIMap.ASSERT_OptionsMenuLoaded_VS2010();
+            UIMap.ARRANGE_ClickExpand_XamarinOption_VS2010();
+            //UIMap.ASSERT_OptionsMenu_IsLoadedAndVisible();
+            //UIMap.ASSERT_SearchOptions_IsLoadedAndVisible();
+            //UIMap.ACT_Enter_Xamarin_inTxtBox_SearchOptions();
+            UIMap.ASSERT_Xamarin_Android_InstalledAndVisible();
+            UIMap.ASSERT_Xamarin_iOS_InstalledAndVisible();
+            UIMap.ACT_Click_TopLevelOption();
+            UIMap.ACT_Click_Check_Latest_Xamarin_Installed_NoNewUpdatesRequired();
+            UIMap.ACT_Click_Xamarin_Android_Settings_TreeViewLevel_2();
+            UIMap.ACT_Click_Xamarin_iOS_Settings_TreeViewLevel_2();
+            UIMap.ASSERT_iOS_SettingsScreen_IsLoadedAndVisible();
+            UIMap.ASSERT_AppleSDK_TxtBox_ValueisEmpty();
+            UIMap.ACT_Enter_SDKValue_inAppleSDK_TextBox(TestContext.DataRow["Apple_SDK"].ToString());
+            UIMap.ASSERT_SDKValueEntered_Matches_ExpectedValue();
+            UIMap.ACT_Enter_SDKValue_inAppleSDK_TextBox(TestContext.DataRow["ClearEntryValue"].ToString());
+            UIMap.Arrange_Click_OKButton_ToCloseOptionsScreen();
+        }
+
+        /// <summary>
+        /// Options_s the apple SDK text box_ text entryis editable_ v S2013.
+        /// </summary>
         [TestCategory("Xamarin_3_3_47_0"),
          TestCategory("VisualStudio_2013"),
          TestCategory("OptionsMenu"),
          TestCategory("Android"),
          DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\TestData2014.csv",
              "TestData2014#csv", DataAccessMethod.Sequential), DeploymentItem("TestData2014.csv"), TestMethod]
-        public void Options_ChangeAndroidSDKLocation_NewSDKLocation()
+        public void Options_ChangeAndroidSDKLocation_NewSDKLocation_VS2013()
         {
-            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+            LaunchVisualStudio2013();
+            UIMap.ARRANGE_Click_ToolsMenu();
+            UIMap.ARRANGE_Click_Tools_OptionsMenu();
+            UIMap.ASSERT_OptionsMenu_IsLoadedAndVisible();
+            UIMap.ASSERT_SearchOptions_IsLoadedAndVisible();
+            UIMap.ACT_Enter_Xamarin_inTxtBox_SearchOptions();
+            UIMap.ASSERT_Xamarin_Android_InstalledAndVisible();
+            UIMap.ASSERT_Xamarin_iOS_InstalledAndVisible();
+            UIMap.ACT_Click_TopLevelOption();
+            UIMap.ACT_Click_Check_Latest_Xamarin_Installed_NoNewUpdatesRequired();
+            UIMap.ACT_Click_Xamarin_Android_Settings_TreeViewLevel_2();
+            UIMap.ACT_ChangeAndroidSDKLocation_NegativeTest(TestContext.DataRow["AndroidSDKLocation"].ToString());
+        }
 
+        /// <summary>
+        /// Options_s the apple SDK text box_ text entryis editable_ v S2013.
+        /// </summary>
+        [TestCategory("Xamarin_3_3_47_0"),
+         TestCategory("VisualStudio_2010"),
+         TestCategory("OptionsMenu"),
+         TestCategory("Android"),
+         DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\TestData2014.csv",
+             "TestData2014#csv", DataAccessMethod.Sequential), DeploymentItem("TestData2014.csv"), TestMethod]
+        public void Options_ChangeAndroidSDKLocation_NewSDKLocation_VS2010()
+        {
+            LaunchVisualStudio2010();
+            UIMap.ARRANGE_Click_ToolsOptions_VS2010();
+            UIMap.ASSERT_OptionsMenuLoaded_VS2010();
+            UIMap.ARRANGE_ClickExpand_XamarinOption_VS2010();
+            //UIMap.ASSERT_OptionsMenu_IsLoadedAndVisible();
+            //UIMap.ASSERT_SearchOptions_IsLoadedAndVisible();
+            //UIMap.ACT_Enter_Xamarin_inTxtBox_SearchOptions();
+            UIMap.ASSERT_Xamarin_Android_InstalledAndVisible();
+            UIMap.ASSERT_Xamarin_iOS_InstalledAndVisible();
+            UIMap.ACT_Click_TopLevelOption();
+            UIMap.ACT_Click_Check_Latest_Xamarin_Installed_NoNewUpdatesRequired();
             UIMap.ACT_Click_Xamarin_Android_Settings_TreeViewLevel_2();
             UIMap.ACT_ChangeAndroidSDKLocation_NegativeTest(TestContext.DataRow["AndroidSDKLocation"].ToString());
         }
@@ -71,16 +174,6 @@ namespace XamarinOptionsAutomation
         [TestInitialize]
         public void MyTestInitialize()
         {
-            UIMap.ARRANGE_Launch_VisualStudio2013();
-            UIMap.ARRANGE_Click_ToolsMenu();
-            UIMap.ARRANGE_Click_Tools_OptionsMenu();
-            UIMap.ASSERT_OptionsMenu_IsLoadedAndVisible();
-            UIMap.ASSERT_SearchOptions_IsLoadedAndVisible();
-            UIMap.ACT_Enter_Xamarin_inTxtBox_SearchOptions();
-            UIMap.ASSERT_Xamarin_Android_InstalledAndVisible();
-            UIMap.ASSERT_Xamarin_iOS_InstalledAndVisible();
-            UIMap.ACT_Click_TopLevelOption();
-            UIMap.ACT_Click_Check_Latest_Xamarin_Installed_NoNewUpdatesRequired();
         }
 
         ////Use TestCleanup to run code after each test has run

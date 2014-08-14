@@ -10,35 +10,32 @@ namespace XamarinOptionsAutomation
 {
     public partial class UIMap
     {
-        private ACT_ChangeAndroidSDKLocation_NegativeTestParams mACT_ChangeAndroidSDKLocation_NegativeTestParams;
-        private ARRANGE_Clear_AppleSDK_BlankValueParams mARRANGE_Clear_AppleSDK_BlankValueParams;
-        private ASSERT_AppleSDKisEmptyExpectedValues mASSERT_AppleSDKisEmptyExpectedValues;
-        private ASSERT_OptionsMenuLoadedExpectedValues mASSERT_OptionsMenuLoadedExpectedValues;
-        private ASSERT_SDKValueEnteredExpectedValues mASSERT_SDKValueEnteredExpectedValues;
-        private ASSERT_SearchOptionsDisplayedExpectedValues mASSERT_SearchOptionsDisplayedExpectedValues;
-        private ASSERT_XamarinAndroidInstalledExpectedValues mASSERT_XamarinAndroidInstalledExpectedValues;
-        private ASSERT_XamariniOSInstalledExpectedValues mASSERT_XamariniOSInstalledExpectedValues;
-
-        private ASSERT_iOSSettingsScreenLoadedSuccessfullyExpectedValues
-            mASSERT_iOSSettingsScreenLoadedSuccessfullyExpectedValues;
-
-        private EnterAppleSDKLocationParams mEnterAppleSDKLocationParams;
-
-        private EnterAppleSDKLocation_NewParams mEnterAppleSDKLocation_NewParams;
-
-        private EnterValueinTextBoxParams mEnterValueinTextBoxParams;
-        private EnterXamarinSearchOptionsParams mEnterXamarinSearchOptionsParams;
-        private LaunchVisualStudio2013Params mLaunchVisualStudio2013Params;
+        private ACT_ChangeAndroidSDKLocation_NegativeTestParams _mActChangeAndroidSdkLocationNegativeTestParams;
+        private ARRANGE_Clear_AppleSDK_BlankValueParams _mArrangeClearAppleSdkBlankValueParams;
+        private ASSERT_AppleSDKisEmptyExpectedValues _mAssertAppleSdKisEmptyExpectedValues;
+        private ASSERT_iOSSettingsScreenLoadedSuccessfullyExpectedValues _mAssertIOsSettingsScreenLoadedSuccessfullyExpectedValues;
+        private ASSERT_OptionsMenuLoadedExpectedValues _mAssertOptionsMenuLoadedExpectedValues;
+        private ASSERT_SDKValueEnteredExpectedValues _mAssertSdkValueEnteredExpectedValues;
+        private ASSERT_SearchOptionsDisplayedExpectedValues _mAssertSearchOptionsDisplayedExpectedValues;
+        private ASSERT_XamarinAndroidInstalledExpectedValues _mAssertXamarinAndroidInstalledExpectedValues;
+        private ASSERT_XamariniOSInstalledExpectedValues _mAssertXamariniOsInstalledExpectedValues;
+        private EnterAppleSDKLocation_NewParams _mEnterAppleSdkLocationNewParams;
+        private EnterAppleSDKLocationParams _mEnterAppleSdkLocationParams;
+        private EnterValueinTextBoxParams _mEnterValueinTextBoxParams;
+        private EnterXamarinSearchOptionsParams _mEnterXamarinSearchOptionsParams;
+        private LaunchVisualStudio2013Params _mLaunchVisualStudio2013Params;
+        private ARRANGE_ClickExpand_XamarinOption_VS2010Params _mArrangeClickExpandXamarinOptionVs2010Params;
+        private ASSERT_OptionsMenuLoaded_VS2010ExpectedValues _mAssertOptionsMenuLoadedVs2010ExpectedValues;
 
         public virtual EnterAppleSDKLocationParams EnterAppleSDKLocationParams
         {
             get
             {
-                if ((mEnterAppleSDKLocationParams == null))
+                if ((_mEnterAppleSdkLocationParams == null))
                 {
-                    mEnterAppleSDKLocationParams = new EnterAppleSDKLocationParams();
+                    _mEnterAppleSdkLocationParams = new EnterAppleSDKLocationParams();
                 }
-                return mEnterAppleSDKLocationParams;
+                return _mEnterAppleSdkLocationParams;
             }
         }
 
@@ -46,11 +43,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mEnterAppleSDKLocation_NewParams == null))
+                if ((_mEnterAppleSdkLocationNewParams == null))
                 {
-                    mEnterAppleSDKLocation_NewParams = new EnterAppleSDKLocation_NewParams();
+                    _mEnterAppleSdkLocationNewParams = new EnterAppleSDKLocation_NewParams();
                 }
-                return mEnterAppleSDKLocation_NewParams;
+                return _mEnterAppleSdkLocationNewParams;
             }
         }
 
@@ -58,11 +55,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mEnterValueinTextBoxParams == null))
+                if ((_mEnterValueinTextBoxParams == null))
                 {
-                    mEnterValueinTextBoxParams = new EnterValueinTextBoxParams();
+                    _mEnterValueinTextBoxParams = new EnterValueinTextBoxParams();
                 }
-                return mEnterValueinTextBoxParams;
+                return _mEnterValueinTextBoxParams;
             }
         }
 
@@ -71,11 +68,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mASSERT_AppleSDKisEmptyExpectedValues == null))
+                if ((_mAssertAppleSdKisEmptyExpectedValues == null))
                 {
-                    mASSERT_AppleSDKisEmptyExpectedValues = new ASSERT_AppleSDKisEmptyExpectedValues();
+                    _mAssertAppleSdKisEmptyExpectedValues = new ASSERT_AppleSDKisEmptyExpectedValues();
                 }
-                return mASSERT_AppleSDKisEmptyExpectedValues;
+                return _mAssertAppleSdKisEmptyExpectedValues;
             }
         }
 
@@ -84,12 +81,12 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mASSERT_iOSSettingsScreenLoadedSuccessfullyExpectedValues == null))
+                if ((_mAssertIOsSettingsScreenLoadedSuccessfullyExpectedValues == null))
                 {
-                    mASSERT_iOSSettingsScreenLoadedSuccessfullyExpectedValues =
+                    _mAssertIOsSettingsScreenLoadedSuccessfullyExpectedValues =
                         new ASSERT_iOSSettingsScreenLoadedSuccessfullyExpectedValues();
                 }
-                return mASSERT_iOSSettingsScreenLoadedSuccessfullyExpectedValues;
+                return _mAssertIOsSettingsScreenLoadedSuccessfullyExpectedValues;
             }
         }
 
@@ -97,11 +94,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mASSERT_OptionsMenuLoadedExpectedValues == null))
+                if ((_mAssertOptionsMenuLoadedExpectedValues == null))
                 {
-                    mASSERT_OptionsMenuLoadedExpectedValues = new ASSERT_OptionsMenuLoadedExpectedValues();
+                    _mAssertOptionsMenuLoadedExpectedValues = new ASSERT_OptionsMenuLoadedExpectedValues();
                 }
-                return mASSERT_OptionsMenuLoadedExpectedValues;
+                return _mAssertOptionsMenuLoadedExpectedValues;
             }
         }
 
@@ -109,11 +106,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mASSERT_SDKValueEnteredExpectedValues == null))
+                if ((_mAssertSdkValueEnteredExpectedValues == null))
                 {
-                    mASSERT_SDKValueEnteredExpectedValues = new ASSERT_SDKValueEnteredExpectedValues();
+                    _mAssertSdkValueEnteredExpectedValues = new ASSERT_SDKValueEnteredExpectedValues();
                 }
-                return mASSERT_SDKValueEnteredExpectedValues;
+                return _mAssertSdkValueEnteredExpectedValues;
             }
         }
 
@@ -121,11 +118,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mASSERT_SearchOptionsDisplayedExpectedValues == null))
+                if ((_mAssertSearchOptionsDisplayedExpectedValues == null))
                 {
-                    mASSERT_SearchOptionsDisplayedExpectedValues = new ASSERT_SearchOptionsDisplayedExpectedValues();
+                    _mAssertSearchOptionsDisplayedExpectedValues = new ASSERT_SearchOptionsDisplayedExpectedValues();
                 }
-                return mASSERT_SearchOptionsDisplayedExpectedValues;
+                return _mAssertSearchOptionsDisplayedExpectedValues;
             }
         }
 
@@ -133,11 +130,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mASSERT_XamarinAndroidInstalledExpectedValues == null))
+                if ((_mAssertXamarinAndroidInstalledExpectedValues == null))
                 {
-                    mASSERT_XamarinAndroidInstalledExpectedValues = new ASSERT_XamarinAndroidInstalledExpectedValues();
+                    _mAssertXamarinAndroidInstalledExpectedValues = new ASSERT_XamarinAndroidInstalledExpectedValues();
                 }
-                return mASSERT_XamarinAndroidInstalledExpectedValues;
+                return _mAssertXamarinAndroidInstalledExpectedValues;
             }
         }
 
@@ -145,11 +142,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mASSERT_XamariniOSInstalledExpectedValues == null))
+                if ((_mAssertXamariniOsInstalledExpectedValues == null))
                 {
-                    mASSERT_XamariniOSInstalledExpectedValues = new ASSERT_XamariniOSInstalledExpectedValues();
+                    _mAssertXamariniOsInstalledExpectedValues = new ASSERT_XamariniOSInstalledExpectedValues();
                 }
-                return mASSERT_XamariniOSInstalledExpectedValues;
+                return _mAssertXamariniOsInstalledExpectedValues;
             }
         }
 
@@ -157,11 +154,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mEnterXamarinSearchOptionsParams == null))
+                if ((_mEnterXamarinSearchOptionsParams == null))
                 {
-                    mEnterXamarinSearchOptionsParams = new EnterXamarinSearchOptionsParams();
+                    _mEnterXamarinSearchOptionsParams = new EnterXamarinSearchOptionsParams();
                 }
-                return mEnterXamarinSearchOptionsParams;
+                return _mEnterXamarinSearchOptionsParams;
             }
         }
 
@@ -169,11 +166,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mLaunchVisualStudio2013Params == null))
+                if ((_mLaunchVisualStudio2013Params == null))
                 {
-                    mLaunchVisualStudio2013Params = new LaunchVisualStudio2013Params();
+                    _mLaunchVisualStudio2013Params = new LaunchVisualStudio2013Params();
                 }
-                return mLaunchVisualStudio2013Params;
+                return _mLaunchVisualStudio2013Params;
             }
         }
 
@@ -181,11 +178,11 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mARRANGE_Clear_AppleSDK_BlankValueParams == null))
+                if ((_mArrangeClearAppleSdkBlankValueParams == null))
                 {
-                    mARRANGE_Clear_AppleSDK_BlankValueParams = new ARRANGE_Clear_AppleSDK_BlankValueParams();
+                    _mArrangeClearAppleSdkBlankValueParams = new ARRANGE_Clear_AppleSDK_BlankValueParams();
                 }
-                return mARRANGE_Clear_AppleSDK_BlankValueParams;
+                return _mArrangeClearAppleSdkBlankValueParams;
             }
         }
 
@@ -193,46 +190,40 @@ namespace XamarinOptionsAutomation
         {
             get
             {
-                if ((mACT_ChangeAndroidSDKLocation_NegativeTestParams == null))
+                if ((_mActChangeAndroidSdkLocationNegativeTestParams == null))
                 {
-                    mACT_ChangeAndroidSDKLocation_NegativeTestParams =
+                    _mActChangeAndroidSdkLocationNegativeTestParams =
                         new ACT_ChangeAndroidSDKLocation_NegativeTestParams();
                 }
-                return mACT_ChangeAndroidSDKLocation_NegativeTestParams;
+                return _mActChangeAndroidSdkLocationNegativeTestParams;
             }
         }
 
-        /// <summary>
-        ///     EnterAppleSDKLocation - Use 'EnterAppleSDKLocationParams' to pass parameters into this method.
-        /// </summary>
-        public void EnterAppleSDKLocation()
+        public virtual ARRANGE_ClickExpand_XamarinOption_VS2010Params ARRANGE_ClickExpand_XamarinOption_VS2010Params
         {
-            #region Variable Declarations
-
-            WinEdit uITxtXcodeHintEdit = UIOptionsWindow.UITxtXcodeHintWindow.UITxtXcodeHintEdit;
-            uITxtXcodeHintEdit.SearchConfigurations.Add(SearchConfiguration.AlwaysSearch);
-
-            #endregion
-
-            // Type '/TEST/TEST1/TestValue' in 'txtXcodeHint' text box
-            uITxtXcodeHintEdit.Text = EnterAppleSDKLocationParams.UITxtXcodeHintEditText;
+            get
+            {
+                if ((_mArrangeClickExpandXamarinOptionVs2010Params == null))
+                {
+                    _mArrangeClickExpandXamarinOptionVs2010Params =
+                        new ARRANGE_ClickExpand_XamarinOption_VS2010Params();
+                }
+                return _mArrangeClickExpandXamarinOptionVs2010Params;
+            }
         }
 
-        /// <summary>
-        ///     EnterAppleSDKLocation_New - Use 'EnterAppleSDKLocation_NewParams' to pass parameters into this method.
-        /// </summary>
-        public void EnterAppleSDKLocation_New()
+        public virtual ASSERT_OptionsMenuLoaded_VS2010ExpectedValues ASSERT_OptionsMenuLoaded_VS2010ExpectedValues
         {
-            #region Variable Declarations
-
-            WinEdit uITxtXcodeHintEdit1 = UIOptionsWindow.UITxtXcodeHintWindow.UITxtXcodeHintEdit1;
-            uITxtXcodeHintEdit1.SearchConfigurations.Add(SearchConfiguration.AlwaysSearch);
-
-            #endregion
-
-            // Type 'TEST1234' in 'txtXcodeHint' text box
-            uITxtXcodeHintEdit1.Text = EnterAppleSDKLocation_NewParams.UITxtXcodeHintEdit1Text;
+            get
+            {
+                if ((_mAssertOptionsMenuLoadedVs2010ExpectedValues == null))
+                {
+                    _mAssertOptionsMenuLoadedVs2010ExpectedValues = new ASSERT_OptionsMenuLoaded_VS2010ExpectedValues();
+                }
+                return _mAssertOptionsMenuLoadedVs2010ExpectedValues;
+            }
         }
+
 
         /// <summary>
         ///     EnterValueinTextBox - Use 'EnterValueinTextBoxParams' to pass parameters into this method.
@@ -246,7 +237,6 @@ namespace XamarinOptionsAutomation
 
             #endregion
 
-            Keyboard.SendKeys("{TAB}");
             Keyboard.SendKeys(sdkvalue);
         }
 
@@ -263,6 +253,7 @@ namespace XamarinOptionsAutomation
             #endregion
 
             // Verify that the 'Text' property of 'txtXcodeHint' text box equals ''
+            Keyboard.SendKeys("{TAB}");
 
             Assert.AreEqual(ASSERT_AppleSDKisEmptyExpectedValues.UITxtXcodeHintEditText, uITxtXcodeHintEdit.Text,
                 "Apple SDK contains value");
@@ -389,16 +380,8 @@ namespace XamarinOptionsAutomation
             // Click 'Check Now' link
             Mouse.Click(uICheckNowHyperlink, new Point(22, 11));
 
-            // Set the playback to wait for all threads to finish
-            Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.AllThreads;
-
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(43, 13));
-
-            // Reset the playback to wait only for the UI thread to finish
-            Playback.PlaybackSettings.WaitForReadyLevel = WaitForReadyLevel.UIThreadOnly;
-
-            Playback.Wait(2000);
+            Keyboard.SendKeys(" ");
         }
 
         /// <summary>
@@ -544,22 +527,6 @@ namespace XamarinOptionsAutomation
                 LaunchVisualStudio2013Params.AlternateExePath);
         }
 
-        /// <summary>
-        ///     Clear out the value entered in the Apple SDK Field
-        /// </summary>
-        public void ARRANGE_Clear_AppleSDK_BlankValue()
-        {
-            #region Variable Declarations
-
-            WinEdit uITxtXcodeHintEdit = UIOptionsWindow.UITxtXcodeHintWindow1.UITxtXcodeHintEdit;
-            uITxtXcodeHintEdit.SearchConfigurations.Add(SearchConfiguration.AlwaysSearch);
-
-            #endregion
-
-            // Type '' in 'txtXcodeHint' text box
-            Keyboard.SendKeys("{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{LEFT}{DEL}{DEL}{DEL}{DEL}{DEL}{DEL}{DEL}{DEL}");
-        }
-
 
         /// <summary>
         ///     ACT_ChangeAndroidSDKLocation_NegativeTest - Use 'ACT_ChangeAndroidSDKLocation_NegativeTestParams' to pass
@@ -593,19 +560,73 @@ namespace XamarinOptionsAutomation
             // Type 'TEST' in 'textBox1' text box
             //uITextBox1Edit.Text = this.ACT_ChangeAndroidSDKLocation_NegativeTestParams.UITextBox1EditText;
 
-
+            Playback.PlaybackSettings.MatchExactHierarchy = true;
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(46, 10));
-
+            Keyboard.SendKeys("{ENTER}");
+            //Mouse.Click(uIOKButton, new Point(46, 10));
 
             // Click '&OK' button
-            Mouse.Click(uIOKButton1, new Point(43, 12));
+            Keyboard.SendKeys("{ENTER}");
+            // Mouse.Click(uIOKButton1, new Point(43, 12));
 
             // Click 'Cancel' button
             Mouse.Click(uICancelButton, new Point(45, 7));
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton2, new Point(16, 7));
+            Keyboard.SendKeys("{ENTER}");
+            //Mouse.Click(uIOKButton2, new Point(16, 7));
+        }
+
+        /// <summary>
+        ///     Click Tools Options in Visual Studio 2010
+        /// </summary>
+        public void ARRANGE_Click_ToolsOptions_VS2010()
+        {
+            #region Variable Declarations
+
+            WpfMenuItem uIOptionsMenuItem =
+                UIStartPageMicrosoftViWindow.UIMenuBarMenuBar.UIToolsMenuItem.UIOptionsMenuItem;
+
+            #endregion
+
+            // Click 'Tools' -> 'Options...' menu item
+            Mouse.Click(uIOptionsMenuItem, new Point(107, 16));
+        }
+
+        /// <summary>
+        ///     Click and Expand the Visual Studio 2010 Xamarin Menu
+        /// </summary>
+        public void ARRANGE_ClickExpand_XamarinOption_VS2010()
+        {
+            #region Variable Declarations
+
+            WinTreeItem uIXamarinTreeItem = UIOptionsWindow.UIItemWindow.UIXamarinTreeItem;
+
+            #endregion
+
+            Keyboard.SendKeys("{LEFT}{LEFT}");
+
+            // Click 'Xamarin' tree item
+            Mouse.Click(uIXamarinTreeItem, new Point(31, 11));
+
+            // Expand 'Xamarin' tree item
+            uIXamarinTreeItem.Expanded = ARRANGE_ClickExpand_XamarinOption_VS2010Params.UIXamarinTreeItemExpanded;
+        }
+
+        /// <summary>
+        ///     Assert Options Menu Loaded
+        /// </summary>
+        public void ASSERT_OptionsMenuLoaded_VS2010()
+        {
+            #region Variable Declarations
+
+            WinTitleBar uIOptionsTitleBar = UIOptionsWindow.UIOptionsTitleBar;
+
+            #endregion
+
+            // Verify that the 'DisplayText' property of 'Options' title bar equals 'Options'
+            Assert.AreEqual(ASSERT_OptionsMenuLoaded_VS2010ExpectedValues.UIOptionsTitleBarDisplayText,
+                uIOptionsTitleBar.DisplayText, "OptionsMenu is not loaded successfully");
         }
     }
 
@@ -883,6 +904,38 @@ namespace XamarinOptionsAutomation
         ///     Type 'TEST' in 'textBox1' text box
         /// </summary>
         public string UITextBox1EditText = "TEST";
+
+        #endregion
+    }
+
+    /// <summary>
+    ///     Parameters to be passed into 'ARRANGE_ClickExpand_XamarinOption_VS2010'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "12.0.30501.0")]
+    public class ARRANGE_ClickExpand_XamarinOption_VS2010Params
+    {
+        #region Fields
+
+        /// <summary>
+        ///     Expand 'Xamarin' tree item
+        /// </summary>
+        public bool UIXamarinTreeItemExpanded = true;
+
+        #endregion
+    }
+
+    /// <summary>
+    ///     Parameters to be passed into 'ASSERT_OptionsMenuLoaded_VS2010'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "12.0.30501.0")]
+    public class ASSERT_OptionsMenuLoaded_VS2010ExpectedValues
+    {
+        #region Fields
+
+        /// <summary>
+        ///     Verify that the 'DisplayText' property of 'Options' title bar equals 'Options'
+        /// </summary>
+        public string UIOptionsTitleBarDisplayText = "Options";
 
         #endregion
     }
